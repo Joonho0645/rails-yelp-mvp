@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Summoning the goods of Fourth Dimension..."
+categories =  ["chinese", "italian", "japanese", "french", "belgian"]
+
+
+10.times do
+  Restaurant.create(name: Faker::OnePiece.location,
+    address: Faker::OnePiece.island,
+    phone_number: Faker::PhoneNumber.cell_phone,
+    category: categories.sample)
+end
+puts " The goods have been summoned :)"
